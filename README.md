@@ -7,7 +7,7 @@ See below the recorded SMOKE visualization on RVIz.
  
 ![alt text](animation/smoke_ros.gif)
 
-it is slowed down so that it is visible. But it has achieve greater perfomance (about 20fps).
+it is slowed down so that it is visible. But it has achieve greater perfomance (about 20fps). It was compiled with cuda 11.
 
 first clone this repo with 
 ```bash
