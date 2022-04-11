@@ -11,16 +11,16 @@ it is slowed down so that it is visible. But it has achieve greater perfomance (
 
 first clone this repo with 
 ```bash
-git clone git@github.com:poledna/SMOKE_ros.git --recurse-submodules
+git clone git@github.com:poledna/SMOKE_ros.git --recurse-submodules 
 ```
 then create the virtual enviroment with:
 ```bash 
 cd SMOKE_ros/
-conda env create -f smoke_env.yaml
+conda env create -f smoke_pkg.yaml
 ```
 activate the conda enviroment (it is importante to activate this enviroment every time before the ros source)
 ```bash 
-conda activate smoke_env
+conda activate smoke_pkg
 cd SMOKE
 ```
 the build SMOKE
@@ -28,7 +28,6 @@ the build SMOKE
 python setup.py build develop
 ```
 with SMOKE build 
-
 
 ```bash 
 ```
