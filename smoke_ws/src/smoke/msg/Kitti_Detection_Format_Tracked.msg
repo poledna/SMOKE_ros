@@ -1,0 +1,20 @@
+float64 type
+float64 truncated
+float64 occluded
+float64 alpha
+
+float64 rotation_y
+float64 score
+float64 id
+
+float64 position_x
+float64 position_y
+float64 velocity_x
+float64 velocity_y
+float64 acceleration_x
+float64 acceleration_y
+
+float64[] bbox
+float64[] dimensions
+float64[] location
+float64[36] covariance
