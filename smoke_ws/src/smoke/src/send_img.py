@@ -29,6 +29,7 @@ def yaml_to_CameraInfo(yaml_fname):
         calib_data = yaml.safe_load(file_handle)
     # Parse
     camera_info_msg = CameraInfo()
+    camera_info_msg.header.stamp = rospy.Time.now()
     camera_info_msg.width = calib_data["image_width"]
     camera_info_msg.height = calib_data["image_height"]
     camera_info_msg.K = calib_data["camera_matrix"]["data"]
@@ -50,6 +51,7 @@ camera_info_msg = yaml_to_CameraInfo("ost.yaml")
 
 def cv2_to_imgmsg(cv_image):
     img_msg = Image()
+    img_msg.header.stamp = rospy.Time.now()
     img_msg.height = cv_image.shape[0]
     img_msg.width = cv_image.shape[1]
     img_msg.encoding = "bgr8"
@@ -61,6 +63,7 @@ def cv2_to_imgmsg(cv_image):
 
 
 while not rospy.is_shutdown():
+    camera_info_msg.header.stamp = rospy.Time.now()
     publisher_cam_info.publish(camera_info_msg)
     publisher_cam_raw.publish(cv2_to_imgmsg(image))
     sleep(1)

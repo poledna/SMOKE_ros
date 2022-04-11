@@ -19,7 +19,7 @@ from smoke.modeling.heatmap_coder import get_transfrom_matrix
 from smoke.structures.params_3d import ParamsList
 import torchvision.transforms.functional as TF
 
-NODE_NAME = 'camera_SMOKE'
+NODE_NAME = 'smoke_kernel'
 
 TOPIC_NAME_RAW_IN = "/camera/image_raw"
 

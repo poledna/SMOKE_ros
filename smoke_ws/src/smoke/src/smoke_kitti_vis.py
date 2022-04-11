@@ -28,11 +28,10 @@ def get_color(prediction):
 
 def draw_3Dbox(img, line, P2):
     size = img.size 
-    for prediction_line in line:
-        obj = detectionInfo(prediction_line)      
+    for obj in line:
         thickness = 1
         corners_2D = compute_3Dbox(P2, obj)
-        color, color_text = get_color(prediction_line)
+        color, color_text = get_color(obj)
 
 
         corners_2D = corners_2D.astype(np.int16)
@@ -54,7 +53,7 @@ def draw_3Dbox(img, line, P2):
         img = cv2.line(img,corners_2D[:, 3], corners_2D[:, 6],color,thickness)
         img = cv2.line(img,corners_2D[:, 4], corners_2D[:, 5],color,thickness)
 
-        detect_text = f"{VEHICLES[prediction_line[0]]}:{int(prediction_line[-1]*100)}%"
+        detect_text = f"{VEHICLES[obj.name]}:{int(obj.score*100)}%"
         (w, h), _ = cv2.getTextSize(detect_text, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 1)
         img = cv2.rectangle(img, (obj.xmin, (obj.ymin - 20)), ((obj.xmin + w), obj.ymin) , color, -1)
         img = cv2.putText(img, detect_text, (obj.xmin, obj.ymin ),
