@@ -27,13 +27,7 @@ the build SMOKE
 ```bash 
 python setup.py build develop
 ```
-with SMOKE build 
-
-```bash 
-```
-
-
-then build the workspace
+with SMOKE built build the workspace
 
 ```bash
 cd ../smoke_ws
@@ -43,6 +37,27 @@ and source the workspace
 ```bash 
 source devel/setup.bash
 ```
+now you should be able to execute the smoke kernel ros code with:
+```bash 
+cd src/smoke/src/
+rosrun smoke_pkg smoke_kernel.py 
+```
+if you see 
+```bash 
+##################################################
+SMOKE model loaded to GPU!
+```
+it has worked and now is waiting inputs on: `/camera/image_raw`. If it does not init due to file not found go to the `SMOKE_ros/smoke_ws/src/smoke/src` dir. (An issue Im not sure how to solve yet)
+
+To test with a test image of kitti run:
+
+```bash 
+cd src/smoke/src/
+rosrun smoke_pkg send_image.py 
+```
+
+
+
 
 
 
