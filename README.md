@@ -57,9 +57,12 @@ rosrun smoke_pkg send_image.py
 ```
 
 
+To view the image use:
 
-
-
+```bash 
+rosrun smoke_pkg smoke_kitti_visualization.py 
+```
+and use RViz
 
 to cite SMOKE work:
 ```
