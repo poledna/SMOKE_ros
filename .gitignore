@@ -1,4 +1,6 @@
 **/devel/
 **/build/
+**/logs/
 *.pyc
 **/__pycache/
+**/.catkin_tools
