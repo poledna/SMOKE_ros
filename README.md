@@ -5,7 +5,7 @@ No changes in SMOKE architecture were made, but the weights must be loaded and t
 
 See below the recorded SMOKE visualization on RVIz.
  
-![alt text][animation/smoke_ros.gif]
+![alt text](animation/smoke_ros.gif)
 
 it is slowed down so that it is visible. But it has achieve greater perfomance (about 20fps).
 
