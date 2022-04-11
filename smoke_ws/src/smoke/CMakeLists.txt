@@ -58,8 +58,6 @@ find_package(geometry_msgs)
       FILES
       Kitti_Detection_Format.msg
       Kitti_Detection_Array.msg
-      Kitti_Detection_Format_Tracked.msg
-      Kitti_Detection_Array_Tracked.msg
       )
    
    generate_messages(DEPENDENCIES std_msgs geometry_msgs)
